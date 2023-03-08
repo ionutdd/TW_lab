@@ -1,0 +1,21 @@
+.body{
+    font-size: 16px;
+}
+
+.mic
+{
+    background-color: yellow;
+    height: 30rem;
+    width: 30rem;
+    border: 6rem solid black;
+}
+
+.mare 
+{
+    padding: 6rem;
+    background-color: red;
+    height: 40rem;
+    width: 43.25rem;
+    border-bottom: 4rem solid grey;
+    border-right: 15rem solid whitesmoke;
+}
