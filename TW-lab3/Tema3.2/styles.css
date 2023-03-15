@@ -1,0 +1,86 @@
+html {
+	font-size:16px;
+}
+
+.buton {
+	border:0.125rem brown ridge;
+	background: #ffc37a;
+	font-weight:bold;
+	color:white;
+	text-shadow:0rem 0rem 0.25rem black,0rem 0rem 0.188rem black,0rem 0rem 0.125rem black,0rem 0rem 0.125rem black;
+	box-shadow:0rem -0.188rem 0.125rem grey;
+	height:2em;
+	line-height:2em;
+	width:10rem;
+	text-align:center;
+	display:inline-block;
+	font-size:0.9em;
+	border-top-left-radius:0.313rem;
+	border-top-right-radius:0.313rem;
+}
+
+.buton:hover{
+	background:orange;
+}
+
+#coloane > section{
+	border: 0.063rem solid green;
+	padding:0.125rem;
+	min-width:6.25rem;
+	flex: 1;
+	flex-wrap: 12.5rem;
+}
+#coloane {
+	display: flex;
+	flex-wrap: wrap;
+}
+div#coloane{
+	border-top: 0.188rem inset #BBB;
+}
+
+#ord_dr_s:hover ~ #coloane{
+	flex-direction: row-reverse;
+}
+
+#ord_3124:hover ~ #coloane > :nth-child(1){
+	order: 2;
+	flex: 1;	
+}
+#ord_3124:hover ~ #coloane > :nth-child(2){
+	order: 3;
+	flex: 1;	
+}
+#ord_3124:hover ~ #coloane > :nth-child(3){
+	order: 1;
+	flex: 1;	
+}
+#ord_3124:hover ~ #coloane > :nth-child(4){
+	order: 4;
+	flex: 3;	
+} 
+
+#imagini{
+	display: flex;
+	flex-direction: column;
+}
+img {
+	align-self: flex-start;
+}
+
+#img_invers:hover ~ #coloane #s_imag #imagini img{
+	align-self: flex-end;
+}
+#img_invers:hover ~ #coloane #s_imag #imagini :nth-child(2){
+	order:6
+}
+#img_invers:hover ~ #coloane #s_imag #imagini :nth-child(3){
+	order:5
+}
+#img_invers:hover ~ #coloane #s_imag #imagini :nth-child(4){
+	order:4
+}
+#img_invers:hover ~ #coloane #s_imag #imagini :nth-child(5){
+	order:3
+}#img_invers:hover ~ #coloane #s_imag #imagini :nth-child(6){
+	order:2
+}
