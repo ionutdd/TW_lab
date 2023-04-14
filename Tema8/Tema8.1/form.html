@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add person</title>
+  <script>
+    window.addEventListener('load', () => {
+      document.querySelector('form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const firstName = formData.get('firstName');
+        const lastName = formData.get('lastName');
+        const age = formData.get('age');
+        const city = formData.get('city');
+        try {
+          const result = await fetch('/add', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ firstName, lastName, age, city })
+          });
+          if(result.ok) {
+            window.location.href = '/persoane';
+          } else {
+            alert('eroare');
+          }
+        } catch(err) {
+          console.log(err);
+          alert('Eroare!');
+        }
+      });
+    })
+  </script>
+</head>
+<body>
+  <form>
+    <label>First name: </label>
+    <input name="firstName" required />
+    <br>
+    <label>Last name: </label>
+    <input name="lastName" required />
+    <br>
+    <label>Age: </label>
+    <input name="age" required />
+    <br>
+    <label>City: </label>
+    <input name="city" required />
+    <br>
+    
+    <input type="submit" value="Add person">
+  </form>
+</body>
+</html>
