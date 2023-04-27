@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a picture</title>
+    <style>
+        input, textarea {
+            display: block;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data">
+        <h1>Încarcă poză</h1>
+        <input type="text" name="title" required placeholder="Titlu*" />
+        <input type="file" name="picture" required>
+        <textarea name="description" placeholder="Descriere..."></textarea>
+        <input type="submit" value="Încarcă">
+    </form>
+</body>
+</html>
